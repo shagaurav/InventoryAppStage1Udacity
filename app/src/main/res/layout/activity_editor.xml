@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivityEditor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Product Label-->
+            <TextView
+                android:id="@+id/product_overview"
+                style="@style/GameEditorLabel"
+                android:textSize="@dimen/text_size_overview"
+                android:text="@string/label_product_overview" />
+
+        </LinearLayout>
+
+        <!--Product Overview-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Inout Fields-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--Product Name Field-->
+                <EditText
+                    android:id="@+id/product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edit_product_name"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <!--Price Field-->
+                <EditText
+                    android:id="@+id/poduct_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edit_price"
+                    android:inputType="numberSigned" />
+
+                <!--Quantity Field-->
+                <EditText
+                    android:id="@+id/product_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edit_quantity"
+                    android:inputType="numberSigned" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--Supplier Label-->
+            <TextView
+                android:id="@+id/supplier_overview"
+                android:textSize="@dimen/text_size_overview"
+                style="@style/GameEditorLabel"
+                android:text="@string/label_supplier_overview" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/GameEditorTextStyle"
+                android:textSize="@dimen/supplier_text_size"
+                android:text="@string/edit_supplier_name" />
+
+            <Spinner
+                android:id="@+id/product_supplier_name_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spinner_layout_height"
+                android:paddingRight="@dimen/spinner_padding_right"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <!--Supplier Overview-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/overivew_margin_top"
+            android:orientation="vertical">
+
+            <!--Input Fields-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--Supplier Contact Field-->
+                <EditText
+                    android:id="@+id/supplier_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edit_supplier_contact"
+                    android:inputType="phone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
